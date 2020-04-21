@@ -33,6 +33,8 @@ function generateMarkdown(data) {
 
 
 ## Description
+${data.description}
+
 ## Installation
 ## Usage
 ## License
@@ -41,31 +43,4 @@ function generateMarkdown(data) {
 ## Questions
 `;
 }
-module.exports = generateMarkdown;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function generateMarkdown(data) {
-  return `
-# ${data.title}
-
-`;
-}
-
 module.exports = generateMarkdown;

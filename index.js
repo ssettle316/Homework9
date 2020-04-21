@@ -25,6 +25,7 @@ inquirer
     ])
     .then(answers => {
         console.log(JSON.stringify(answers, null, '  '));
+        writeToFile("project.md", markdown({...answers}));
       });
 
 
@@ -32,7 +33,7 @@ inquirer
 function writeToFile(fileName, data) {
     //setup write file
 
-    fs.writeFile("log.txt", process.argv[2], function(err) {
+    fs.writeFile(fileName, data, function(err) {
 
         if (err) {
           return console.log(err);
